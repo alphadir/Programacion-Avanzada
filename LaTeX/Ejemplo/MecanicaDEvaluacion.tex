@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+%Preamble
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+		 \def\Centrar#1
+		 {
+			\begin{center}
+			#1
+		 	\end{center}
+		 }
+		
+		 \newcount\EvidCountTUno\EvidCountTUno0
+		
+		 \def\EvidTipoUno#1{
+		 \global\advance\EvidCountTUno by 1
+		 			  {\large\bf Evidencia tipo 1 No. \the\EvidCountTUno
+		 			  \\ #1}
+		 }%end macro \EvidTipoUno
+		
+		 \newcount\EvidDTellez
+	  	 	\EvidDTellez=0
+		
+		 \def\EvidenciaDTellez#1{
+		 	\global\advance\EvidDTellez by 1
+		 	Tellez P\'erez José&#1\\\hline
+		 }
+
+		 \newcount\EvidDAcosta
+	  	 	\EvidDAcosta=0
+		
+		 \def\EvidenciaDAcosta#1{
+		 	\global\advance\EvidDAcosta by 1
+		 	Acosta Tolentino Alan&#1\\\hline
+		 }
+		
+\begin{document}
+				\noindent\EvidTipoUno{Calcular superf\/icie de un circulo}\par
+				
+				\Centrar{
+				\begin{tabular}{|l|p{1.5in}|}\hline
+								 %Tellez P\'erez José&Evidencia completa\\\hline
+								 \EvidenciaDTellez{Evidencia completa}
+								 %Acosta Tolentino Alan&OK\\\hline
+								 %\EvidenciaDAcosta{OK}
+		 		\end{tabular}
+				}
+				
+                Acá tendremos la continuación de este documento
+			  	\eject
+				\noindent\EvidTipoUno{Un programa en Fortran}\par
+				\Centrar{
+				\begin{tabular}{|l|p{1.5in}|}\hline
+								 %Tellez P\'erez José&Evidencia completa\\\hline
+								 \EvidenciaDTellez{Evidencia completa}
+								 %Acosta Tolentino Alan&OK\\\hline
+								 \EvidenciaDAcosta{OK}
+		 		\end{tabular}
+				}
+
+				\noindent Resumen de las evidencias tipo 1 recibidas\par
+				\Centrar{
+		 		\begin{tabular}{|l|r|}\hline
+			 	Tellez Perez Jose&\the\EvidDTellez\\\hline
+			 	Acosta Tolentino Alan&\the\EvidDAcosta\\\hline
+			 	\end{tabular}
+			 	}
+
+				\eject
+				\noindent Ejemplo de una clase en C++
+				\begin{verbatim}
+				class Fecha{
+					  int dia;
+					  int mes;
+					  int anio;
+                public: Fecha(int,int,int);
+                char *nombre_del_dia();/* "Lunes", "Martes", etc. */
+		  		};
+
+				\end{verbatim}
+
+\end{document}
