@@ -1,0 +1,1 @@
+Usar el instalador Online que tiene como tool MinGW
